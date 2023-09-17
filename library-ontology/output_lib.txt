@@ -1,0 +1,400 @@
+@prefix : <http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology> a owl:Ontology .
+
+:Dance a owl:Class ;
+    rdfs:subClassOf :Art .
+
+:Doctrines a owl:Class ;
+    rdfs:subClassOf :Religion .
+
+:Elize_H a :Administrator,
+        :Staff,
+        owl:NamedIndividual ;
+    :name_of "Elize H"^^xsd:string ;
+    :organizes :Book ;
+    :wasBorn :France .
+
+:Emir_A a :User,
+        owl:NamedIndividual ;
+    :name_of "Emir_A"^^xsd:string ;
+    :use :Computer ;
+    :wasBorn :Turkey .
+
+:Engineering a owl:Class ;
+    rdfs:subClassOf :Technology .
+
+:English_Literature a owl:Class ;
+    rdfs:subClassOf :Literature,
+        :Phonetic .
+
+:Epistemology a owl:Class ;
+    rdfs:subClassOf :Philosophy .
+
+:Ethics a owl:Class ;
+    rdfs:subClassOf :Religion .
+
+:Havva a :Security,
+        owl:NamedIndividual ;
+    :name_of "Havva"^^xsd:string ;
+    :wasBorn :Turkey .
+
+:Linguistic a owl:Class ;
+    rdfs:subClassOf :Language .
+
+:Medical a owl:Class ;
+    rdfs:subClassOf :Science .
+
+:Medicine a owl:Class ;
+    rdfs:subClassOf :Technology .
+
+:Müyo a :User,
+        owl:NamedIndividual ;
+    :name_of "Müyo"^^xsd:string ;
+    :use :Computer ;
+    :wasBorn :England .
+
+:Nagihan_Baz a :Administrator,
+        owl:NamedIndividual ;
+    :keeps_track_of :Book ;
+    :name_of "Nagihan Baz"^^xsd:string ;
+    :visits :France ;
+    :wasBorn :Turkey .
+
+:Physics a owl:Class ;
+    rdfs:subClassOf :Science .
+
+:Psychometry a owl:Class ;
+    rdfs:subClassOf :Psychology .
+
+:Religious_Experience a owl:Class ;
+    rdfs:subClassOf :Religion .
+
+:Theater a owl:Class ;
+    rdfs:subClassOf :Art .
+
+:book a owl:DatatypeProperty .
+
+:genre a owl:DatatypeProperty .
+
+:has1 a owl:ObjectProperty ;
+    rdfs:domain :Book ;
+    rdfs:range :Publisher ;
+    owl:propertyDisjointWith :has2 .
+
+:hasEdition a owl:DatatypeProperty ;
+    rdfs:domain :Book ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+:hasPages a owl:DatatypeProperty ;
+    rdfs:domain :Book ;
+    rdfs:range xsd:positiveInteger .
+
+:hasPrice a owl:DatatypeProperty ;
+    rdfs:domain :Book ;
+    rdfs:range xsd:float .
+
+:instance_of a owl:ObjectProperty ;
+    rdfs:domain :Nuclear ;
+    rdfs:range :Science .
+
+:is_a a owl:ObjectProperty ;
+    rdfs:domain :Administrator,
+        :Staff ;
+    rdfs:range :Employee .
+
+:keeps_track_of a owl:ObjectProperty ;
+    rdfs:domain :Administrator ;
+    rdfs:range :Book .
+
+:name_of a owl:DatatypeProperty ;
+    rdfs:domain :Administrator,
+        :Author,
+        :Staff ;
+    rdfs:range xsd:string .
+
+:name_of_book a owl:DatatypeProperty ;
+    rdfs:domain :Book ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+:organizes a owl:ObjectProperty ;
+    rdfs:domain :Staff ;
+    rdfs:range :Book .
+
+:published_by a owl:ObjectProperty ;
+    rdfs:domain :Publisher ;
+    rdfs:range :Book .
+
+:research a owl:ObjectProperty ;
+    rdfs:domain :User ;
+    rdfs:range :Book .
+
+:sequel_of a owl:ObjectProperty ;
+    rdfs:domain :Book ;
+    rdfs:range :Book .
+
+:type_of a owl:ObjectProperty ;
+    rdfs:domain :Arithmetics,
+        :Art,
+        :Language,
+        :Literature,
+        :Mathematic,
+        :Philosophy,
+        :Psychology,
+        :Religion,
+        :Science,
+        :Technology ;
+    rdfs:range :Book ;
+    rdfs:subPropertyOf owl:topObjectProperty .
+
+:use a owl:ObjectProperty ;
+    rdfs:domain :User ;
+    rdfs:range :Computer ;
+    rdfs:subPropertyOf owl:topObjectProperty .
+
+:visits a owl:ObjectProperty ;
+    rdfs:domain :User ;
+    rdfs:range :Library .
+
+:wasBorn a owl:ObjectProperty ;
+    rdfs:domain :Author ;
+    rdfs:range :Country .
+
+:work a owl:ObjectProperty ;
+    rdfs:domain :Administrator,
+        :Employee,
+        :Staff ;
+    rdfs:range :Library .
+
+:writes a owl:ObjectProperty ;
+    rdfs:domain :Author ;
+    rdfs:range :Book ;
+    rdfs:subPropertyOf owl:topObjectProperty ;
+    owl:inverseOf :written_by .
+
+:İlknur_Alkan a :Staff,
+        owl:NamedIndividual ;
+    :name_of "İlknur_Alkan"^^xsd:string ;
+    :visits :Turkey ;
+    :wasBorn :England .
+
+:Algebra a owl:Class ;
+    rdfs:subClassOf :Mathematic .
+
+<http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Algebra:CompleteIntroduction> a :Algebra,
+        owl:NamedIndividual ;
+    :genre "Algebra"^^xsd:string ;
+    :hasPages 256 ;
+    :name_of_book "Algebra:CompleteIntroduction"^^xsd:string ;
+    :published_by :Hakan_P ;
+    :type_of :Book ;
+    :written_by :Hugh_Neill ;
+    owl:sameAs :Book .
+
+:Arithmetics a owl:Class ;
+    rdfs:subClassOf :Mathematic .
+
+:Hugh_Neill a :Author,
+        owl:NamedIndividual ;
+    :name_of "Hugh_Neill"^^xsd:string ;
+    :wasBorn :England ;
+    :writes <http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Algebra:CompleteIntroduction> .
+
+:Humanism a owl:Class ;
+    rdfs:subClassOf :Philosophy .
+
+:Nuclear a owl:Class ;
+    rdfs:subClassOf :Technology .
+
+:Phonetic a owl:Class ;
+    rdfs:subClassOf :Language .
+
+:Security a owl:Class ;
+    rdfs:subClassOf :Employee .
+
+:Yaşar_Kemal a :Author,
+        owl:NamedIndividual ;
+    :name_of "Yaşar_Kemal"^^xsd:string ;
+    :wasBorn :Turkey ;
+    :writes :InceMemed .
+
+:has2 a owl:ObjectProperty ;
+    rdfs:domain :Book ;
+    rdfs:range :Author .
+
+:istance_of2 a owl:ObjectProperty ;
+    rdfs:range [ a owl:Restriction ;
+            owl:onProperty :istance_of2 ;
+            owl:someValuesFrom :Turkish_Literature ] .
+
+:written_by a owl:ObjectProperty ;
+    rdfs:domain :Author ;
+    rdfs:range :Book .
+
+:Hakan_P a :Publisher,
+        owl:NamedIndividual ;
+    :name_of "Hakan_P"^^xsd:string ;
+    :wasBorn :France .
+
+:InceMemed a :Turkish_Literature,
+        owl:NamedIndividual ;
+    :genre "Turkish_Literature"^^xsd:string ;
+    :hasPages 1059 ;
+    :name_of_book "InceMemed"^^xsd:string ;
+    :type_of :Book ;
+    :written_by :Yaşar_Kemal .
+
+:Kurgu3 a :Others,
+        owl:NamedIndividual ;
+    :genre "Others"^^xsd:string ;
+    :hasPages 321 ;
+    :name_of_book "Kurgu3"^^xsd:string ;
+    :sequel_of :Kurgu2 ;
+    :type_of :Book ;
+    :written_by :Margaret_Atwood .
+
+:PicturePerfect a :Others,
+        owl:NamedIndividual ;
+    :genre "Others"^^xsd:string ;
+    :hasPages 447 ;
+    :name_of_book "PicturePerfect"^^xsd:string ;
+    :sequel_of :ThePinkRose ;
+    :type_of :Book ;
+    :written_by :Alice_Roberts .
+
+:Psychology a owl:Class ;
+    rdfs:subClassOf :Book .
+
+:TheLittleBookofHumanism a :Humanism,
+        owl:NamedIndividual ;
+    :genre "Humanism"^^xsd:string ;
+    :hasPages 143 ;
+    :name_of_book "TheLittleBookofHumanism"^^xsd:string ;
+    :published_by :Hakan_P ;
+    :type_of :Book ;
+    :written_by :Alice_Roberts .
+
+:Turkish_Literature a owl:Class ;
+    rdfs:subClassOf :Literature .
+
+:Alice_Roberts a :Author,
+        owl:NamedIndividual ;
+    :name_of "Alice_Roberts"^^xsd:string ;
+    :wasBorn :England ;
+    :writes :PicturePerfect,
+        :TheLittleBookofHumanism,
+        :ThePinkRose .
+
+:Art a owl:Class ;
+    rdfs:subClassOf :Book .
+
+:Kurgu a :Others,
+        owl:NamedIndividual ;
+    :genre "Others"^^xsd:string ;
+    :hasPages 198 ;
+    :name_of_book "Kurgu"^^xsd:string ;
+    :type_of :Book ;
+    :written_by :Margaret_Atwood .
+
+:Kurgu2 a :Others,
+        owl:NamedIndividual ;
+    :genre "Others"^^xsd:string ;
+    :hasPages 267 ;
+    :name_of_book "Kurgu2"^^xsd:string ;
+    :sequel_of :Kurgu ;
+    :type_of :Book ;
+    :written_by :Margaret_Atwood .
+
+:Language a owl:Class ;
+    rdfs:subClassOf :Book .
+
+:Literature a owl:Class ;
+    rdfs:subClassOf :Book .
+
+:Margaret_Atwood a :Author,
+        owl:NamedIndividual ;
+    :wasBorn :France ;
+    :writes :Kurgu,
+        :Kurgu2,
+        :Kurgu3 .
+
+:Mathematic a owl:Class ;
+    rdfs:subClassOf :Book .
+
+:Philosophy a owl:Class ;
+    rdfs:subClassOf :Book .
+
+:Publisher a owl:Class ;
+    rdfs:subClassOf :Library .
+
+:ThePinkRose a :Others,
+        owl:NamedIndividual ;
+    :genre "Others"^^xsd:string ;
+    :hasPages 352 ;
+    :name_of_book "ThePinkRose"^^xsd:string ;
+    :type_of :Book ;
+    :written_by :Alice_Roberts .
+
+:Computer a :Computer,
+        owl:Class,
+        owl:NamedIndividual ;
+    rdfs:subClassOf :Library .
+
+:Country a owl:Class ;
+    rdfs:subClassOf :Library .
+
+:England a :Country,
+        owl:NamedIndividual .
+
+:France a :Country,
+        owl:NamedIndividual .
+
+:Religion a owl:Class ;
+    rdfs:subClassOf :Book .
+
+:Science a owl:Class ;
+    rdfs:subClassOf :Book .
+
+:Technology a owl:Class ;
+    rdfs:subClassOf :Book .
+
+:Employee a owl:Class ;
+    rdfs:subClassOf :Library .
+
+:Others a owl:Class ;
+    rdfs:subClassOf :Book .
+
+:Turkey a :Country,
+        owl:NamedIndividual .
+
+:User a owl:Class ;
+    rdfs:subClassOf :Library .
+
+:Administrator a owl:Class ;
+    rdfs:subClassOf :Employee .
+
+:Staff a owl:Class ;
+    rdfs:subClassOf :Employee .
+
+:Author a owl:Class ;
+    rdfs:subClassOf :Library .
+
+:Library a owl:Class .
+
+:Book a :Book,
+        owl:Class,
+        owl:NamedIndividual ;
+    rdfs:subClassOf :Library ;
+    owl:sameAs :InceMemed,
+        :Kurgu,
+        :Kurgu2,
+        :Kurgu3,
+        :PicturePerfect,
+        :TheLittleBookofHumanism,
+        :ThePinkRose .
+

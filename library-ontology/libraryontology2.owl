@@ -1,0 +1,903 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#"
+     xml:base="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#has1 -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#has1">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Book"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Publisher"/>
+        <owl:propertyDisjointWith rdf:resource="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#has2"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#has2 -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#has2">
+        <rdfs:range rdf:resource="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Author"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Book"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#instance_of -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#instance_of">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Nuclear"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Science"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#is_a -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#is_a">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Administrator"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Employee"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Staff"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#istance_of2 -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#istance_of2">
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#istance_of2"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Turkish_Literature"/>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#keeps_track_of -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#keeps_track_of">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Administrator"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Book"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#organizes -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#organizes">
+        <rdfs:range rdf:resource="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Book"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Staff"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#published_by -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#published_by">
+        <rdfs:range rdf:resource="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Book"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Publisher"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#research -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#research">
+        <rdfs:range rdf:resource="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Book"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#User"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#sequel_of -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#sequel_of">
+        <rdfs:range rdf:resource="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Book"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Book"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#type_of -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#type_of">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Arithmetics"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Art"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Book"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Language"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Literature"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Mathematic"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Philosophy"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Psychology"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Religion"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Science"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Technology"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#use -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#use">
+        <rdfs:range rdf:resource="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Computer"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#User"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#visits -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#visits">
+        <rdfs:range rdf:resource="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Library"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#User"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#wasBorn -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#wasBorn">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Author"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Country"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#work -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#work">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Administrator"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Employee"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Library"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Staff"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#writes -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#writes">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Author"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Book"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#written_by"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#written_by -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#written_by">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Author"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Book"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#book -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#book"/>
+    
+
+
+    <!-- http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#genre -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#genre"/>
+    
+
+
+    <!-- http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#hasEdition -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#hasEdition">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Book"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#hasPages -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#hasPages">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Book"/>
+        <rdfs:range rdf:resource="&xsd;positiveInteger"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#hasPrice -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#hasPrice">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Book"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#name_of -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#name_of">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Administrator"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Author"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Staff"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#name_of_book -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#name_of_book">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Book"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Administrator -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Administrator">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Employee"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Algebra -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Algebra">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Mathematic"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Arithmetics -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Arithmetics">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Mathematic"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Art -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Art">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Book"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Author -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Author">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Library"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Book -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Book">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Library"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Computer -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Computer">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Library"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Country -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Country">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Library"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Dance -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Dance">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Art"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Doctrines -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Doctrines">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Religion"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Employee -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Employee">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Library"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Engineering -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Engineering">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Technology"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#English_Literature -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#English_Literature">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Literature"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Phonetic"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Epistemology -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Epistemology">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Philosophy"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Ethics -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Ethics">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Religion"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Humanism -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Humanism">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Philosophy"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Language -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Language">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Book"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Library -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Library"/>
+    
+
+
+    <!-- http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Linguistic -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Linguistic">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Language"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Literature -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Literature">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Book"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Mathematic -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Mathematic">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Book"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Medical -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Medical">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Science"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Medicine -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Medicine">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Technology"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Nuclear -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Nuclear">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Technology"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Others -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Others">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Book"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Philosophy -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Philosophy">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Book"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Phonetic -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Phonetic">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Language"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Physics -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Physics">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Science"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Psychology -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Psychology">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Book"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Psychometry -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Psychometry">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Psychology"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Publisher -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Publisher">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Library"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Religion -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Religion">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Book"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Religious_Experience -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Religious_Experience">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Religion"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Science -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Science">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Book"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Security -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Security">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Employee"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Staff -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Staff">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Employee"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Technology -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Technology">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Book"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Theater -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Theater">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Art"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Turkish_Literature -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Turkish_Literature">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Literature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#User -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#User">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Library"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Algebra:CompleteIntroduction -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Algebra:CompleteIntroduction">
+        <rdf:type rdf:resource="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Algebra"/>
+        <hasPages rdf:datatype="&xsd;integer">256</hasPages>
+        <genre rdf:datatype="&xsd;string">Algebra</genre>
+        <name_of_book rdf:datatype="&xsd;string">Algebra:CompleteIntroduction</name_of_book>
+        <owl:sameAs rdf:resource="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Book"/>
+        <type_of rdf:resource="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Book"/>
+        <published_by rdf:resource="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Hakan_P"/>
+        <written_by rdf:resource="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Hugh_Neill"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Alice_Roberts -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Alice_Roberts">
+        <rdf:type rdf:resource="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Author"/>
+        <name_of rdf:datatype="&xsd;string">Alice_Roberts</name_of>
+        <wasBorn rdf:resource="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#England"/>
+        <writes rdf:resource="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#PicturePerfect"/>
+        <writes rdf:resource="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#TheLittleBookofHumanism"/>
+        <writes rdf:resource="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#ThePinkRose"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Book -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Book">
+        <rdf:type rdf:resource="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Book"/>
+        <owl:sameAs rdf:resource="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#InceMemed"/>
+        <owl:sameAs rdf:resource="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Kurgu"/>
+        <owl:sameAs rdf:resource="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Kurgu2"/>
+        <owl:sameAs rdf:resource="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Kurgu3"/>
+        <owl:sameAs rdf:resource="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#PicturePerfect"/>
+        <owl:sameAs rdf:resource="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#TheLittleBookofHumanism"/>
+        <owl:sameAs rdf:resource="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#ThePinkRose"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Computer -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Computer">
+        <rdf:type rdf:resource="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Computer"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Elize_H -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Elize_H">
+        <rdf:type rdf:resource="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Administrator"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Staff"/>
+        <name_of rdf:datatype="&xsd;string">Elize H</name_of>
+        <organizes rdf:resource="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Book"/>
+        <wasBorn rdf:resource="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#France"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Emir_A -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Emir_A">
+        <rdf:type rdf:resource="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#User"/>
+        <name_of rdf:datatype="&xsd;string">Emir_A</name_of>
+        <use rdf:resource="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Computer"/>
+        <wasBorn rdf:resource="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Turkey"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#England -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#England">
+        <rdf:type rdf:resource="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Country"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#France -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#France">
+        <rdf:type rdf:resource="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Country"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Hakan_P -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Hakan_P">
+        <rdf:type rdf:resource="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Publisher"/>
+        <name_of rdf:datatype="&xsd;string">Hakan_P</name_of>
+        <wasBorn rdf:resource="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#France"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Havva -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Havva">
+        <rdf:type rdf:resource="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Security"/>
+        <name_of rdf:datatype="&xsd;string">Havva</name_of>
+        <wasBorn rdf:resource="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Turkey"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Hugh_Neill -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Hugh_Neill">
+        <rdf:type rdf:resource="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Author"/>
+        <name_of rdf:datatype="&xsd;string">Hugh_Neill</name_of>
+        <writes rdf:resource="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Algebra:CompleteIntroduction"/>
+        <wasBorn rdf:resource="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#England"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#InceMemed -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#InceMemed">
+        <rdf:type rdf:resource="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Turkish_Literature"/>
+        <hasPages rdf:datatype="&xsd;integer">1059</hasPages>
+        <name_of_book rdf:datatype="&xsd;string">InceMemed</name_of_book>
+        <genre rdf:datatype="&xsd;string">Turkish_Literature</genre>
+        <type_of rdf:resource="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Book"/>
+        <written_by rdf:resource="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Yaşar_Kemal"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Kurgu -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Kurgu">
+        <rdf:type rdf:resource="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Others"/>
+        <hasPages rdf:datatype="&xsd;integer">198</hasPages>
+        <name_of_book rdf:datatype="&xsd;string">Kurgu</name_of_book>
+        <genre rdf:datatype="&xsd;string">Others</genre>
+        <type_of rdf:resource="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Book"/>
+        <written_by rdf:resource="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Margaret_Atwood"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Kurgu2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Kurgu2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Others"/>
+        <hasPages rdf:datatype="&xsd;integer">267</hasPages>
+        <name_of_book rdf:datatype="&xsd;string">Kurgu2</name_of_book>
+        <genre rdf:datatype="&xsd;string">Others</genre>
+        <type_of rdf:resource="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Book"/>
+        <sequel_of rdf:resource="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Kurgu"/>
+        <written_by rdf:resource="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Margaret_Atwood"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Kurgu3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Kurgu3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Others"/>
+        <hasPages rdf:datatype="&xsd;integer">321</hasPages>
+        <name_of_book rdf:datatype="&xsd;string">Kurgu3</name_of_book>
+        <genre rdf:datatype="&xsd;string">Others</genre>
+        <type_of rdf:resource="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Book"/>
+        <sequel_of rdf:resource="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Kurgu2"/>
+        <written_by rdf:resource="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Margaret_Atwood"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Margaret_Atwood -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Margaret_Atwood">
+        <rdf:type rdf:resource="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Author"/>
+        <wasBorn rdf:resource="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#France"/>
+        <writes rdf:resource="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Kurgu"/>
+        <writes rdf:resource="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Kurgu2"/>
+        <writes rdf:resource="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Kurgu3"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Müyo -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Müyo">
+        <rdf:type rdf:resource="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#User"/>
+        <name_of rdf:datatype="&xsd;string">Müyo</name_of>
+        <use rdf:resource="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Computer"/>
+        <wasBorn rdf:resource="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#England"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Nagihan_Baz -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Nagihan_Baz">
+        <rdf:type rdf:resource="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Administrator"/>
+        <name_of rdf:datatype="&xsd;string">Nagihan Baz</name_of>
+        <keeps_track_of rdf:resource="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Book"/>
+        <visits rdf:resource="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#France"/>
+        <wasBorn rdf:resource="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Turkey"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#PicturePerfect -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#PicturePerfect">
+        <rdf:type rdf:resource="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Others"/>
+        <hasPages rdf:datatype="&xsd;integer">447</hasPages>
+        <genre rdf:datatype="&xsd;string">Others</genre>
+        <name_of_book rdf:datatype="&xsd;string">PicturePerfect</name_of_book>
+        <written_by rdf:resource="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Alice_Roberts"/>
+        <type_of rdf:resource="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Book"/>
+        <sequel_of rdf:resource="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#ThePinkRose"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#TheLittleBookofHumanism -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#TheLittleBookofHumanism">
+        <rdf:type rdf:resource="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Humanism"/>
+        <hasPages rdf:datatype="&xsd;integer">143</hasPages>
+        <genre rdf:datatype="&xsd;string">Humanism</genre>
+        <name_of_book rdf:datatype="&xsd;string">TheLittleBookofHumanism</name_of_book>
+        <written_by rdf:resource="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Alice_Roberts"/>
+        <type_of rdf:resource="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Book"/>
+        <published_by rdf:resource="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Hakan_P"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#ThePinkRose -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#ThePinkRose">
+        <rdf:type rdf:resource="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Others"/>
+        <hasPages rdf:datatype="&xsd;integer">352</hasPages>
+        <genre rdf:datatype="&xsd;string">Others</genre>
+        <name_of_book rdf:datatype="&xsd;string">ThePinkRose</name_of_book>
+        <written_by rdf:resource="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Alice_Roberts"/>
+        <type_of rdf:resource="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Book"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Turkey -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Turkey">
+        <rdf:type rdf:resource="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Country"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Yaşar_Kemal -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Yaşar_Kemal">
+        <rdf:type rdf:resource="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Author"/>
+        <name_of rdf:datatype="&xsd;string">Yaşar_Kemal</name_of>
+        <writes rdf:resource="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#InceMemed"/>
+        <wasBorn rdf:resource="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Turkey"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#İlknur_Alkan -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#İlknur_Alkan">
+        <rdf:type rdf:resource="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Staff"/>
+        <name_of rdf:datatype="&xsd;string">İlknur_Alkan</name_of>
+        <wasBorn rdf:resource="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#England"/>
+        <visits rdf:resource="http://www.semanticweb.org/elx13/ontologies/2022/0/library-ontology#Turkey"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
+
